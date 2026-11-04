@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 3,
+  "agentName": "LAPTOP-JE4BFHSP",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus10.actions.githubusercontent.com/vUE9RXHLJ90v3lpAggx95hT4LqIPTfojlGxDH0NepTuD0yck8W/",
+  "gitHubUrl": "https://github.com/acemarcos/crud",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}

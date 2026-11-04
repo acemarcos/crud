@@ -1,0 +1,53 @@
+
+name: Deploy Ionic Vue to Docker
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Check Docker
+        shell: powershell
+        run: |
+          docker --version
+          docker compose version
+
+      - name: Build and Run Docker Container
+        shell: powershell
+        run: |
+          docker compose up -d --build --force-recreate
+
+      - name: Get Docker Container IP
+        shell: powershell
+        run: |
+          Write-Host "Docker Container Information"
+
+          docker ps
+
+          $containerIP = docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ionic-vue-app
+
+          Write-Host "Container IP: $containerIP"
+
+          $route = Get-NetRoute -DestinationPrefix "0.0.0.0/0" |
+            Sort-Object RouteMetric |
+            Select-Object -First 1
+
+          $serverIP = Get-NetIPAddress -InterfaceIndex $route.InterfaceIndex -AddressFamily IPv4 |
+            Select-Object -First 1 -ExpandProperty IPAddress
+
+          Write-Host "Docker Host IP: $serverIP"
+          Write-Host "Application URL: http://${serverIP}:8080"
+
+          Add-Content $env:GITHUB_STEP_SUMMARY "## Docker Deployment Successful"
+          Add-Content $env:GITHUB_STEP_SUMMARY "- Container IP: $containerIP"
+          Add-Content $env:GITHUB_STEP_SUMMARY "- Server IP: $serverIP"
+          Add-Content $env:GITHUB_STEP_SUMMARY "- Application URL: http://${serverIP}:8080"
