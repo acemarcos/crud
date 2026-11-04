@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "acemarcos/crud",
+  "pipelineDirectory": "crud",
+  "workspaceDirectory": "crud\\crud",
+  "repositories": {
+    "acemarcos/crud": {
+      "repositoryPath": "crud\\crud",
+      "lastRunOn": "11/04/2026 20:16:40 +08:00"
+    }
+  },
+  "lastRunOn": "11/04/2026 20:16:40 +08:00"
+}
