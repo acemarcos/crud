@@ -3,7 +3,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Student Grade</ion-title>
+        <ion-title>Student Grade 1</ion-title>
       </ion-toolbar>
     </ion-header>
 
