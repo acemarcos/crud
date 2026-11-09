@@ -1,0 +1,111 @@
+﻿2026-11-06T08:10:54.1210567Z Current runner version: '2.338.2'
+2026-11-06T08:10:54.1222616Z Runner name: 'LAPTOP-JE4BFHSP'
+2026-11-06T08:10:54.1223934Z Runner group name: 'Default'
+2026-11-06T08:10:54.1224785Z Machine name: 'LAPTOP-JE4BFHSP'
+2026-11-06T08:10:54.1230344Z ##[group]GITHUB_TOKEN Permissions
+2026-11-06T08:10:54.1233325Z Contents: read
+2026-11-06T08:10:54.1233855Z Metadata: read
+2026-11-06T08:10:54.1234344Z Packages: read
+2026-11-06T08:10:54.1234865Z ##[endgroup]
+2026-11-06T08:10:54.1238139Z Secret source: Actions
+2026-11-06T08:10:54.1239060Z Cache mode: write
+2026-11-06T08:10:54.1239713Z Prepare workflow directory
+2026-11-06T08:10:54.1887212Z Prepare all required actions
+2026-11-06T08:10:54.1978976Z Getting action download info
+2026-11-06T08:11:28.2599980Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-06T08:12:29.5484666Z Complete job name: deploy
+2026-11-06T08:12:29.7538267Z ##[group]Run actions/checkout@v4
+2026-11-06T08:12:29.7539600Z with:
+2026-11-06T08:12:29.7540010Z   repository: acemarcos/crud
+2026-11-06T08:12:29.7543466Z   token: ***
+2026-11-06T08:12:29.7543757Z   ssh-strict: true
+2026-11-06T08:12:29.7544047Z   ssh-user: git
+2026-11-06T08:12:29.7544364Z   persist-credentials: true
+2026-11-06T08:12:29.7544698Z   clean: true
+2026-11-06T08:12:29.7545003Z   sparse-checkout-cone-mode: true
+2026-11-06T08:12:29.7545356Z   fetch-depth: 1
+2026-11-06T08:12:29.7545647Z   fetch-tags: false
+2026-11-06T08:12:29.7546087Z   show-progress: true
+2026-11-06T08:12:29.7546418Z   lfs: false
+2026-11-06T08:12:29.7546703Z   submodules: false
+2026-11-06T08:12:29.7547004Z   set-safe-directory: true
+2026-11-06T08:12:29.7547353Z   allow-unsafe-pr-checkout: false
+2026-11-06T08:12:29.7548044Z ##[endgroup]
+2026-11-06T08:12:32.7142963Z Syncing repository: acemarcos/crud
+2026-11-06T08:12:32.7146072Z ##[group]Getting Git version info
+2026-11-06T08:12:32.7147214Z Working directory is 'C:\Users\andrei\Documents\acemarcos activity\crud\actions-runner\_work\crud\crud'
+2026-11-06T08:12:32.7264658Z [command]"C:\Program Files\Git\cmd\git.exe" version
+2026-11-06T08:12:32.7912002Z git version 2.50.1.windows.1
+2026-11-06T08:12:32.7984280Z ##[endgroup]
+2026-11-06T08:12:32.8004617Z Copying 'C:\Users\andrei\.gitconfig' to 'C:\Users\andrei\Documents\acemarcos activity\crud\actions-runner\_work\_temp\f6b8fd80-8974-43ef-98ca-4c0bdd5bd078\.gitconfig'
+2026-11-06T08:12:32.8038635Z Temporarily overriding HOME='C:\Users\andrei\Documents\acemarcos activity\crud\actions-runner\_work\_temp\f6b8fd80-8974-43ef-98ca-4c0bdd5bd078' before making global git config changes
+2026-11-06T08:12:32.8040542Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-06T08:12:32.8053312Z [command]"C:\Program Files\Git\cmd\git.exe" config --global --add safe.directory "C:\Users\andrei\Documents\acemarcos activity\crud\actions-runner\_work\crud\crud"
+2026-11-06T08:12:32.8824629Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --get remote.origin.url
+2026-11-06T08:12:32.9444244Z https://github.com/acemarcos/crud
+2026-11-06T08:12:32.9505570Z ##[group]Removing previously created refs, to avoid conflicts
+2026-11-06T08:12:32.9526015Z [command]"C:\Program Files\Git\cmd\git.exe" rev-parse --symbolic-full-name --verify --quiet HEAD
+2026-11-06T08:12:33.0260088Z refs/heads/main
+2026-11-06T08:12:33.0369848Z [command]"C:\Program Files\Git\cmd\git.exe" checkout --detach
+2026-11-06T08:12:34.4849578Z HEAD is now at 218f131 ARJAY SUPOT
+2026-11-06T08:12:34.6224604Z ##[endgroup]
+2026-11-06T08:12:34.6235427Z [command]"C:\Program Files\Git\cmd\git.exe" submodule status
+2026-11-06T08:12:35.7836880Z ##[error]fatal: no submodule mapping found in .gitmodules for path 'actions-runner/_work/crud/crud'
+2026-11-06T08:12:35.7971370Z Bad Submodules found, removing existing files
+2026-11-06T08:12:35.7972140Z ##[group]Cleaning the repository
+2026-11-06T08:12:35.7984486Z [command]"C:\Program Files\Git\cmd\git.exe" clean -ffdx
+2026-11-06T08:12:35.8712633Z [command]"C:\Program Files\Git\cmd\git.exe" reset --hard HEAD
+2026-11-06T08:12:36.0367775Z HEAD is now at 218f131 ARJAY SUPOT
+2026-11-06T08:12:36.0434331Z ##[endgroup]
+2026-11-06T08:12:36.0453344Z ##[warning]Unable to clean or reset the repository. The repository will be recreated instead.
+2026-11-06T08:12:36.0456634Z Deleting the contents of 'C:\Users\andrei\Documents\acemarcos activity\crud\actions-runner\_work\crud\crud'
+2026-11-06T08:12:36.1711315Z ##[group]Initializing the repository
+2026-11-06T08:12:36.1726095Z [command]"C:\Program Files\Git\cmd\git.exe" init "C:\Users\andrei\Documents\acemarcos activity\crud\actions-runner\_work\crud\crud"
+2026-11-06T08:12:36.2718697Z Initialized empty Git repository in C:/Users/andrei/Documents/acemarcos activity/crud/actions-runner/_work/crud/crud/.git/
+2026-11-06T08:12:36.2815306Z [command]"C:\Program Files\Git\cmd\git.exe" remote add origin https://github.com/acemarcos/crud
+2026-11-06T08:12:36.3604698Z ##[endgroup]
+2026-11-06T08:12:36.3605707Z ##[group]Disabling automatic garbage collection
+2026-11-06T08:12:36.3616213Z [command]"C:\Program Files\Git\cmd\git.exe" config --local gc.auto 0
+2026-11-06T08:12:36.4229034Z ##[endgroup]
+2026-11-06T08:12:36.4229749Z ##[group]Setting up auth
+2026-11-06T08:12:36.4246172Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-06T08:12:36.4956784Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-06T08:12:37.6304036Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-06T08:12:37.7032757Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-06T08:12:38.9900249Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-06T08:12:39.0562015Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-06T08:12:40.2575835Z [command]"C:\Program Files\Git\cmd\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-06T08:12:40.3342545Z ##[endgroup]
+2026-11-06T08:12:40.3345296Z ##[group]Fetching the repository
+2026-11-06T08:12:40.3363174Z [command]"C:\Program Files\Git\cmd\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6db75a5ec1c28f1e6c6980a08b7c4c4ba96946f5:refs/remotes/origin/main
+2026-11-06T10:49:20.5385160Z ##[error]error: RPC failed; curl 56 Recv failure: Connection was reset
+2026-11-06T10:49:20.5390729Z ##[error]error: 1634 bytes of body are still expected
+2026-11-06T10:49:23.3068707Z fetch-pack: unexpected disconnect while reading sideband packet
+2026-11-06T10:49:23.4027328Z ##[error]fatal: early EOF
+2026-11-06T10:49:25.6434575Z ##[error]fatal: fetch-pack: invalid index-pack output
+2026-11-06T10:49:26.0098411Z The process 'C:\Program Files\Git\cmd\git.exe' failed with exit code 128
+2026-11-06T10:49:26.0481370Z Waiting 16 seconds before trying again
+2026-11-06T10:49:42.0141600Z [command]"C:\Program Files\Git\cmd\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6db75a5ec1c28f1e6c6980a08b7c4c4ba96946f5:refs/remotes/origin/main
+2026-11-06T10:49:42.1131735Z ##[error]fatal: unable to access 'https://github.com/acemarcos/crud/': Could not resolve host: github.com
+2026-11-06T10:49:42.1239382Z The process 'C:\Program Files\Git\cmd\git.exe' failed with exit code 128
+2026-11-06T10:49:42.1239851Z Waiting 15 seconds before trying again
+2026-11-06T10:49:57.1493419Z [command]"C:\Program Files\Git\cmd\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6db75a5ec1c28f1e6c6980a08b7c4c4ba96946f5:refs/remotes/origin/main
+2026-11-06T10:49:57.2302721Z ##[error]fatal: unable to access 'https://github.com/acemarcos/crud/': Could not resolve host: github.com
+2026-11-06T10:49:57.2410588Z ##[error]The process 'C:\Program Files\Git\cmd\git.exe' failed with exit code 128
+2026-11-06T10:49:57.2879738Z Post job cleanup.
+2026-11-06T10:49:58.0286720Z [command]"C:\Program Files\Git\cmd\git.exe" version
+2026-11-06T10:49:58.0590671Z git version 2.50.1.windows.1
+2026-11-06T10:49:58.0681282Z Copying 'C:\Users\andrei\.gitconfig' to 'C:\Users\andrei\Documents\acemarcos activity\crud\actions-runner\_work\_temp\e33626dd-c05f-4fc8-9d03-8a0869867cdf\.gitconfig'
+2026-11-06T10:49:58.0712659Z Temporarily overriding HOME='C:\Users\andrei\Documents\acemarcos activity\crud\actions-runner\_work\_temp\e33626dd-c05f-4fc8-9d03-8a0869867cdf' before making global git config changes
+2026-11-06T10:49:58.0713368Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-06T10:49:58.0722538Z [command]"C:\Program Files\Git\cmd\git.exe" config --global --add safe.directory "C:\Users\andrei\Documents\acemarcos activity\crud\actions-runner\_work\crud\crud"
+2026-11-06T10:49:58.1104406Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-06T10:49:58.1451437Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-06T10:49:58.8348887Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-06T10:49:58.8667004Z http.https://github.com/.extraheader
+2026-11-06T10:49:58.8724377Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-11-06T10:49:58.9140943Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-06T10:49:59.6020392Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-06T10:49:59.6367208Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-06T10:50:00.3368765Z Cleaning up orphan processes
+2026-11-06T10:50:00.3795099Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
